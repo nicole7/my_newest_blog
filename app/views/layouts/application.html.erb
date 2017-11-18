@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Phase3</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,56 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header role="banner" class=" pad-t-2 pad-b-4  wrap-float bg-white">
+    <div class="max-w-700 center wrap-float">
+
+      <div class="logo-container">
+        <img class="logo" src="/images/logo.png" class="center block">
+        <h1>Bloggin' Around</h1>
+         <header role="banner" class="mar-t-5 pad-t-2 pad-b-4 pad-s-1 wrap-float bg-white">
+          <div class="max-w-700 center wrap-float">
+            <div class="pipe-separate t-light-green left">
+              <p clas="sign_in"> Admin Login</p>
+            </div>
+
+            <div class="pipe-separate t-light-green left">
+               <button class="button">Logout</button>
+            </div>
+
+            <div class="pipe-separate t-light-green left">
+
+            </div>
+            <div class="pipe-separate t-light-green left">
+
+            </div>
+            <div class="pipe-separate t-light-green left">
+
+            </div>
+           </div>
+
+       </div>
+     </div>
+     <div class="pipe-separate t-light-green left">
+        <div id="main_constant">
+          <div id="header">
+            <p>All Posts</p>
+              <div class="Buttons">
+                <button class="button"><%= link_to "New Post", new_post_path %></button>
+              </div>
+            </div>
+            <% flash.each do |name, msg|%>
+              <%= constant_tag(div: msg, class: "alert")%>
+            <%end%>
+
+
+  </header>
+
+        <div class="bg-dk-green pad-t-2 pad-s-1 pad-b-8 mar-b-16 c-white">
+        <div class="max-w-700 center">
+        <%= yield %>
+    </div>
+  </div>
+      </div>
+      </div>
   </body>
 </html>
