@@ -12,6 +12,8 @@ require "action_cable/engine"
 require "sprockets/railtie"
 require "faker"
 require "bcrypt"
+
+config.active_record.whitelist_attributes = true
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
